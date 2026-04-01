@@ -1,0 +1,215 @@
+/* Smart Duplicator – Admin Styles */
+
+:root {
+	--sd-blue:    #2563eb;
+	--sd-blue-lt: #eff6ff;
+	--sd-border:  #e5e7eb;
+	--sd-text:    #111827;
+	--sd-muted:   #6b7280;
+	--sd-radius:  8px;
+}
+
+.smart-dup-wrap {
+	max-width: 780px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── Header ── */
+.smart-dup-header {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 24px 0 28px;
+}
+
+.smart-dup-logo svg {
+	width: 48px;
+	height: 48px;
+	color: var(--sd-blue);
+}
+
+.smart-dup-header h1 {
+	margin: 0;
+	font-size: 22px;
+	color: var(--sd-text);
+}
+
+.smart-dup-tagline {
+	margin: 2px 0 0;
+	color: var(--sd-muted);
+	font-size: 13px;
+}
+
+/* ── Cards ── */
+.smart-dup-card {
+	background: #fff;
+	border: 1px solid var(--sd-border);
+	border-radius: var(--sd-radius);
+	padding: 24px 28px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+
+.smart-dup-card h2 {
+	margin: 0 0 6px;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--sd-text);
+}
+
+.smart-dup-card .description {
+	margin: 0 0 18px;
+	color: var(--sd-muted);
+	font-size: 13px;
+}
+
+/* ── Checkbox grid ── */
+.smart-dup-checkboxes {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 10px;
+}
+
+.smart-dup-checkbox-label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border: 1px solid var(--sd-border);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: border-color .15s, background .15s;
+	font-size: 13px;
+}
+
+.smart-dup-checkbox-label:hover {
+	border-color: var(--sd-blue);
+	background: var(--sd-blue-lt);
+}
+
+.smart-dup-checkbox-label input:checked ~ * {
+	color: var(--sd-blue);
+}
+
+.smart-dup-checkbox-label code {
+	margin-left: auto;
+	font-size: 11px;
+	color: var(--sd-muted);
+	background: #f3f4f6;
+	padding: 1px 5px;
+	border-radius: 4px;
+}
+
+/* ── Form table ── */
+.smart-dup-table th {
+	padding: 12px 16px 12px 0;
+	font-weight: 500;
+	color: var(--sd-text);
+	font-size: 13.5px;
+	vertical-align: top;
+	width: 200px;
+}
+
+.smart-dup-table td {
+	padding: 10px 0;
+}
+
+.smart-dup-table select,
+.smart-dup-table input[type="text"] {
+	border-radius: 6px;
+	border: 1px solid #d1d5db;
+	padding: 7px 10px;
+	font-size: 13px;
+	transition: border-color .15s, box-shadow .15s;
+}
+
+.smart-dup-table select:focus,
+.smart-dup-table input[type="text"]:focus {
+	border-color: var(--sd-blue);
+	box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+	outline: none;
+}
+
+.smart-dup-table .description {
+	margin: 5px 0 0;
+	font-size: 12px;
+	color: var(--sd-muted);
+}
+
+/* ── Toggle switches ── */
+.smart-dup-toggles {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.smart-dup-toggle {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	cursor: pointer;
+	font-size: 13.5px;
+}
+
+.smart-dup-toggle input[type="checkbox"] {
+	display: none;
+}
+
+.toggle-switch {
+	width: 38px;
+	height: 22px;
+	background: #d1d5db;
+	border-radius: 11px;
+	position: relative;
+	flex-shrink: 0;
+	transition: background .2s;
+}
+
+.toggle-switch::after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border-radius: 50%;
+	transition: transform .2s;
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+
+.smart-dup-toggle input:checked + .toggle-switch {
+	background: var(--sd-blue);
+}
+
+.smart-dup-toggle input:checked + .toggle-switch::after {
+	transform: translateX(16px);
+}
+
+/* ── Actions ── */
+.smart-dup-actions {
+	margin-top: 4px;
+}
+
+.smart-dup-save {
+	background: var(--sd-blue) !important;
+	border-color: var(--sd-blue) !important;
+	padding: 8px 22px !important;
+	height: auto !important;
+	border-radius: 6px !important;
+	font-size: 14px !important;
+}
+
+/* ── Footer ── */
+.smart-dup-footer {
+	margin-top: 32px;
+	padding-top: 16px;
+	border-top: 1px solid var(--sd-border);
+	font-size: 12px;
+	color: var(--sd-muted);
+}
+
+.smart-dup-footer a {
+	color: var(--sd-blue);
+	text-decoration: none;
+}
